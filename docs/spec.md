@@ -1,4 +1,4 @@
-# 🛠️ Especificação Técnica (Tech Spec) - Roubank
+# 🛠️ Especificação Técnica (Tech Spec) - PlaceHolder
 
 Este documento detalha a arquitetura técnica, o modelo de dados e os contratos de API (via JSON Server) necessários para o funcionamento do sistema bancário Roubank.
 

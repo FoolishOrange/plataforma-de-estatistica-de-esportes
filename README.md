@@ -1,6 +1,7 @@
 # plataforma-de-estatística-de-esportes
 
-### Leonardo Karpinski de Almeida
+### Autor: Leonardo Karpinski de Almeida
+Um site de estatisticas focado no cenário competitivo de jogos, onde os usuários podem acompanhar estatísticas de jogadores e equipes, resultados de partidas e interagir em chats em tempo real com outros usuários.
 
 #### RA1 - Utilizar Frameworks CSS para estilização de elementos HTML e criação de layouts responsivos.
 

@@ -18,7 +18,7 @@ Abaixo estão as funcionalidades principais do MVP (Minimum Viable Product), esc
 
 ### Épico 1: Autenticação e Conta
 
-- **US01 - Abertura de Conta:** Como um Visitante, quero preencher um formulário com meus dados pessoais (Nome, Email, Senha) para criar uma nova conta no PlaceHolder.
+- **US01 - Criação de Conta:** Como um Visitante, quero preencher um formulário com meus dados pessoais (Nome, Email, Senha) para criar uma nova conta no PlaceHolder.
   - _Critérios de Aceitação:_ O Email deve ser validado; todos os campos são obrigatórios; 
 
 ### Épico 2: Movimentações Financeiras

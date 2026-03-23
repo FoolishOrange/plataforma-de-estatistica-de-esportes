@@ -3,6 +3,33 @@
 ### Autor: Leonardo Karpinski de Almeida
 Um site de estatisticas focado no cenário competitivo de jogos, onde os usuários podem acompanhar estatísticas de jogadores e equipes, resultados de partidas e interagir em chats em tempo real com outros usuários.
 
+Este projeto tem como objetivo implementar progressivamente e de forma didática uma aplicação web inspirada em operações comuns de instituições financeiras (ex: saque, depósito, extrato, saldo, cadastro), sendo o diferencial, a cobrança de taxas de forma abusiva para cada operação realizada pelo cliente.
+
+O frontend da aplicação foi desenvolvido com HTML, CSS e JavaScript e o backend foi simulado pela implementação de uma API Fake, usando o JSON Server.
+
+## 📚 Documentação do Projeto
+
+Para entender as regras de negócio, o escopo e a arquitetura técnica da aplicação, consulte os documentos abaixo:
+
+- [📄 Product Requirements Document (PRD)](./docs/prd.md) - Visão geral, atores e histórias de usuário.
+- [🛠️ Especificação Técnica (Tech Spec)](./docs/spec.md) - Diagrama de banco de dados (DER), dicionário de dados e rotas da API (JSON Server).
+
+## 🎨 Design
+
+- [🎨 Design System](./docs/design-system.md) - Identidade visual
+- [🖼️ Protótipo no Figma](https://www.figma.com/file/a1VDbO1aNfZyulQPxT99OE/beleza-em-dia?node-id=3%3A80) - Telas interativas da aplicação.
+
+## 🌐 Site em Produção - GitHub Pages
+
+https://utfpr-gp.github.io/roubank-css/
+
+## 💻 Tecnologias e Dependências
+
+- **Framework CSS:** MaterializeCSS
+- **JavaScript:**
+  - **JQuery** - Para realizar animações e manipulação do DOM.
+  - **JSON Server** - Para simular uma API REST.
+
 #### RA1 - Utilizar Frameworks CSS para estilização de elementos HTML e criação de layouts responsivos.
 
 - [ ] ID 01 - Prototipa interfaces adaptáveis para no mínimo os tamanhos de tela mobile e desktop, usando ferramentas de design tradicionais (Figma, Quant UX ou Sketch) ou IA (Stitch).

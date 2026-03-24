@@ -21,13 +21,12 @@ Abaixo estão as funcionalidades principais do MVP (Minimum Viable Product), esc
 - **US01 - Criação de Conta:** Como um Visitante, quero preencher um formulário com meus dados pessoais (Nome, Email, Senha) para criar uma nova conta no PlaceHolder.
   - _Critérios de Aceitação:_ O Email deve ser validado; todos os campos são obrigatórios; 
 
-### Épico 2: Movimentações Financeiras
+### Épico 2: Vizualição
 
-- **US02 - Visualizar Time:** Como um Visitante ou Cliente, quero ver meu time, seus jogadores, sua última partida.
-- **US03 - Vizualizar estatísticas de uma partida:** Como um Visitante ou Cliente, quero entrar em uma partida que aconteceu e ver as estatísticas daquela partida.
-- **US04 - Interação em chat:** Como um Cliente, quero poder interargir em um chat em tempo real com outros Clientes.
+- **US02 - Visualizar Time:** Como um Visitante ou Cliente, quero ver meu time, seus jogadores e suas ultimas partidas.
+- **US03 - Vizualizar histórico de partidas** Como um usuário, quero ver uma lista de partidas recentes para acompanhar resultados.
+- **US04 - Vizualizar estatísticas de uma partida:** Como um Visitante ou Cliente, quero entrar em uma partida que aconteceu e ver as estatísticas daquela partida.
 
-### Épico 3: Histórico e Transparência
+### Épico 3: Cliente
 
-- **US06 - Visualizar Extrato:** Como um Cliente, quero visualizar uma lista (tabela ou cards) com o histórico de todas as minhas transações (depósitos e saques).
-  - _Critérios de Aceitação:_ A lista deve mostrar a data, o tipo de transação, o valor bruto e **o valor da taxa cobrada** pelo Roubank, deixando claro o quanto o cliente perdeu na operação.
+- **US01 - Interação em chat:** Como um Cliente, quero poder interargir em um chat em tempo real com outros Clientes.

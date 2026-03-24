@@ -8,22 +8,66 @@ Abaixo está o Diagrama Entidade-Relacionamento (DER) que representa a estrutura
 
 ```mermaid
 erDiagram
-CLIENTE ||--o{ TRANSACAO : "realiza (e paga taxa)"
-CLIENTE {
-string id PK "Gerado automaticamente"
-string nome
-string cpf "Usado para o login"
-string senha
-float saldo "Atualizado a cada operação"
-}
-TRANSACAO {
-string id PK
-string clienteId FK "Vínculo com o Cliente"
-string tipo "DEPOSITO, SAQUE ou TAXA"
-float valor
-string data "Formato ISO (YYYY-MM-DD)"
-string descricao "Ex: 'Taxa de manutenção respiratória'"
-}
+    USUARIO {
+        int id PK
+        string nome
+        string email
+        string senha
+        string tipo
+    }
+
+    TIME {
+        int id PK
+        string nome
+        int usuario_id FK
+    }
+
+    JOGADOR {
+        int id PK
+        string nome
+        string posicao
+        int time_id FK
+    }
+
+    PARTIDA {
+        int id PK
+        date data
+        string resultado
+    }
+
+    TIME_PARTIDA {
+        int time_id FK
+        int partida_id FK
+        string papel
+    }
+
+    ESTATISTICA {
+        int id PK
+        int partida_id FK
+        string descricao
+        string valor
+    }
+
+    CHAT {
+        int id PK
+        string nome
+    }
+
+    MENSAGEM {
+        int id PK
+        int chat_id FK
+        int usuario_id FK
+        string conteudo
+        datetime enviada_em
+    }
+
+    USUARIO ||--o{ MENSAGEM : "envia"
+    TIME ||--o{ JOGADOR : "possui"
+    PARTIDA ||--o{ TIME_PARTIDA : "tem"
+    TIME ||--o{ TIME_PARTIDA : "participa"
+    PARTIDA ||--o{ ESTATISTICA : "gera"
+    CHAT ||--o{ MENSAGEM : "contem"
+    USUARIO ||--o{ TIME : "gerencia"
 ```
 
 ## 2. Dicionário de Dados

@@ -8,66 +8,75 @@ Abaixo está o Diagrama Entidade-Relacionamento (DER) que representa a estrutura
 
 ```mermaid
 erDiagram
-    USUARIO {
-        int id PK
-        string nome
-        string email
-        string senha
-        string tipo
-    }
+	direction TB
+	USUARIO {
+		int idUsuario PK ""  
+		string email UK ""  
+		string senha  ""  
+		string nomeUsuario UK ""  
+		datetime dataCriacao  ""  
+		datetime dataUltimoLogin  ""  
+	}
 
-    TIME {
-        int id PK
-        string nome
-        int usuario_id FK
-    }
+	SESSAO {
+		int idSessao PK ""  
+		int idUsuario FK ""  
+		string token  ""  
+		datetime dataInicio  ""  
+		datetime dataExpiracao  ""  
+	}
 
-    JOGADOR {
-        int id PK
-        string nome
-        string posicao
-        int time_id FK
-    }
+	MENSAGEM {
+		int idMensagem PK ""  
+		int idUsuario FK ""  
+		int idPartida FK ""  
+		string conteudo  ""  
+		datetime dataHora  ""  
+	}
 
-    PARTIDA {
-        int id PK
-        date data
-        string resultado
-    }
+	PARTIDA {
+		int idPartida PK ""  
+		int idCampeonato FK ""  
+		int idTime1 FK ""  
+		int idTime2 FK ""  
+		datetime dataPartida  ""  
+		int placarTime1  ""  
+		int placarTime2  ""  
+		string status  ""  
+	}
 
-    TIME_PARTIDA {
-        int time_id FK
-        int partida_id FK
-        string papel
-    }
+	ESTATISTICA {
+		int idEstatistica PK ""  
+		int idPartida FK ""  
+		int idTime FK ""  
+		int kills  ""  
+		int deaths  ""  
+		int assists  ""  
+		float valorKDA  ""  
+	}
 
-    ESTATISTICA {
-        int id PK
-        int partida_id FK
-        string descricao
-        string valor
-    }
+	TIME {
+		int idTime PK ""  
+		string nomeTime  ""  
+		string pais  ""  
+		datetime dataCriacao  ""  
+	}
 
-    CHAT {
-        int id PK
-        string nome
-    }
+	CAMPEONATO {
+		int idCampeonato PK ""  
+		string nomeCampeonato  ""  
+		datetime dataInicio  ""  
+		datetime dataFim  ""  
+		string regiao  ""  
+	}
 
-    MENSAGEM {
-        int id PK
-        int chat_id FK
-        int usuario_id FK
-        string conteudo
-        datetime enviada_em
-    }
-
-    USUARIO ||--o{ MENSAGEM : "envia"
-    TIME ||--o{ JOGADOR : "possui"
-    PARTIDA ||--o{ TIME_PARTIDA : "tem"
-    TIME ||--o{ TIME_PARTIDA : "participa"
-    PARTIDA ||--o{ ESTATISTICA : "gera"
-    CHAT ||--o{ MENSAGEM : "contem"
-    USUARIO ||--o{ TIME : "gerencia"
+	USUARIO||--o{SESSAO:"tem"
+	USUARIO||--o{MENSAGEM:"envia"
+	PARTIDA||--o{MENSAGEM:"possui"
+	PARTIDA||--o{ESTATISTICA:"tem"
+	TIME||--o{PARTIDA:"joga"
+	CAMPEONATO||--o{PARTIDA:"contem"
+	USUARIO}|--|{SESSAO:"  "
 ```
 
 ## 2. Dicionário de Dados

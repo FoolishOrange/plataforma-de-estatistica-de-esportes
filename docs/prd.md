@@ -4,8 +4,6 @@
 
 O **PlaceHolder** é uma aplicação web que simula um site de estatísticas e banco de dados de partidas profissionais de jogos online.
 
-**O grande diferencial (Regra de Negócio Principal):** Ao contrário dos bancos tradicionais modernos, o Roubank cobra **taxas abusivas** para absolutamente qualquer operação que o cliente realize. O objetivo do sistema é registrar as movimentações financeiras do usuário sempre subtraindo uma porcentagem ou valor fixo sob o pretexto de "taxas de manutenção" ou "impostos do banco".
-
 ## 2. Atores do Sistema
 
 - **Administradores:** Responsável por garantir que as informações disponíveis no site estejam corretas.
@@ -23,7 +21,7 @@ Abaixo estão as funcionalidades principais do MVP (Minimum Viable Product), esc
 
 ### Épico 2: Vizualição
 
-- **US02 - Visualizar Time:** Como um Visitante ou Cliente, quero ver meu time, seus jogadores e suas ultimas partidas.
+- **US02 - Visualizar Time:** Estatisticas de partidas recentes.
 - **US03 - Vizualizar histórico de partidas** Como um usuário, quero ver uma lista de partidas recentes para acompanhar resultados.
 - **US04 - Vizualizar estatísticas de uma partida:** Como um Visitante ou Cliente, quero entrar em uma partida que aconteceu e ver as estatísticas daquela partida.
 

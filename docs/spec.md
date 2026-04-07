@@ -62,9 +62,6 @@ erDiagram
 		datetime dataCriacao  ""  
 	}
 
-
-	}
-
 	USUARIO||--o{SESSAO:"tem"
 	USUARIO||--o{MENSAGEM:"envia"
 	PARTIDA||--o{MENSAGEM:"possui"

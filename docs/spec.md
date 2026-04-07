@@ -74,16 +74,70 @@ erDiagram
 
 Breve explicação das tabelas principais:
 
-- **Clientes:** Responsável por armazenar os dados de autenticação e o saldo consolidado do usuário.
-  - id: Identificador único gerado pelo JSON Server (String ou Hash).
-  - cpf: Chave de acesso do usuário. Em um cenário real seria único, mas para o MVP não há trava estrita no banco, apenas validação no front-end.
-  - saldo: Valor numérico (Float) que representa o dinheiro disponível. Pode ficar negativo devido à cobrança implacável de taxas do banco.
-- **Transações:** Registra o histórico financeiro. Regra de Negócio Crítica: Toda transação de SAQUE ou DEPOSITO feita pelo cliente deve gerar, via JavaScript, uma transação secundária automática do tipo TAXA, subtraindo um valor do saldo do cliente.
-  - clienteId: Chave estrangeira que vincula a transação ao cliente (padrão de nomenclatura exigido pelo JSON Server para rotas aninhadas).
-  - tipo: Aceita apenas os valores "SAQUE", "DEPOSITO" ou "TAXA".
-  - valor: Sempre um número positivo. O front-end decide se soma ou subtrai do saldo geral baseado no tipo.
+Usuário:
+Responsável por armazenar os dados de autenticação e identificação dos usuários do sistema.
 
-## 3. Rotas da API (JSON Server)
+idUsuario: Identificador único do usuário (PK).
+email: Email do usuário, utilizado para login. Deve ser único (UK).
+senha: Senha do usuário (idealmente armazenada com hash).
+nomeUsuario: Nome exibido no sistema, também único (UK).
+dataCriacao: Data de criação da conta.
+dataUltimoLogin: Último acesso do usuário ao sistema.
+
+Sessão:
+Gerencia as sessões ativas dos usuários, permitindo controle de autenticação contínua.
+
+idSessao: Identificador único da sessão (PK).
+idUsuario: Chave estrangeira que vincula a sessão ao usuário (FK).
+token: Token de autenticação da sessão.
+dataInicio: Momento em que a sessão foi iniciada.
+dataExpiracao: Momento em que a sessão expira.
+
+Time:
+Armazena informações sobre os times profissionais.
+
+idTime: Identificador único do time (PK).
+nomeTime: Nome da equipe.
+pais: País de origem do time.
+dataCriacao: Data de fundação ou registro do time no sistema.
+
+Partida:
+Representa uma partida entre dois times dentro de um campeonato.
+
+idPartida: Identificador único da partida (PK).
+idCampeonato: Identificador do campeonato (FK, mesmo não estando detalhado no diagrama).
+idTime1 / idTime2: Times participantes da partida (FK).
+dataPartida: Data e hora em que a partida ocorreu.
+placarTime1 / placarTime2: Número de rounds vencidos por cada time.
+status: Situação da partida (ex: "agendada", "em andamento", "finalizada").
+
+Mensagem:
+Armazena mensagens enviadas pelos usuários, geralmente relacionadas a partidas (ex: comentários).
+
+idMensagem: Identificador único da mensagem (PK).
+idUsuario: Usuário que enviou a mensagem (FK).
+idPartida: Partida associada à mensagem (FK).
+conteudo: Texto da mensagem.
+dataHora: Data e hora do envio.
+
+Estatística:
+Registra o desempenho individual de um time em uma partida específica.
+
+idEstatistica: Identificador único do registro (PK).
+idPartida: Partida relacionada (FK).
+idTime: Time ao qual os dados pertencem (FK).
+kills: Total de eliminações.
+deaths: Total de mortes.
+assists: Total de assistências.
+valorKDA: Indicador de desempenho (Kill/Death/Assist), geralmente calculado.
+
+## 3. Tecnologias: 
+
+**Framework** - MaterializeWeb versão 2.2.2
+**Api** - HLTV.org Live and Upcoming Matches versão 1.0
+**Agentes de IA** - Mermaid.ia, Chatgpt e Stitch.IA
+
+## 4. Rotas da API (JSON Server)
 
 A aplicação consome a API local simulada pelo JSON Server. Abaixo os principais endpoints:
 
@@ -91,7 +145,7 @@ A aplicação consome a API local simulada pelo JSON Server. Abaixo os principai
 - `POST /usuarios` - Cadastra um novo usuário.
 - `GET /transacoes?id_usuario=1` - Retorna o extrato de um usuário específico.
 
-## 4. Estrutura do Banco de Dados (db.json)
+## 5. Estrutura do Banco de Dados (db.json)
 
 Esta é a representação em formato JSON do banco de dados simulado. Esta estrutura serve de contexto para ferramentas de IA e para o JSON Server inicializar a API Fake.
 

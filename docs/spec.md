@@ -62,12 +62,7 @@ erDiagram
 		datetime dataCriacao  ""  
 	}
 
-	CAMPEONATO {
-		int idCampeonato PK ""  
-		string nomeCampeonato  ""  
-		datetime dataInicio  ""  
-		datetime dataFim  ""  
-		string regiao  ""  
+
 	}
 
 	USUARIO||--o{SESSAO:"tem"
@@ -75,7 +70,6 @@ erDiagram
 	PARTIDA||--o{MENSAGEM:"possui"
 	PARTIDA||--o{ESTATISTICA:"tem"
 	TIME||--o{PARTIDA:"joga"
-	CAMPEONATO||--o{PARTIDA:"contem"
 	USUARIO}|--|{SESSAO:"  "
 ```
 

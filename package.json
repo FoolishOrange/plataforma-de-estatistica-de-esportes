@@ -1,0 +1,24 @@
+{
+  "name": "plataforma-de-estatistica-de-esportes",
+  "version": "1.0.0",
+  "description": "Um site de estatisticas focado no cenário competitivo de jogos, onde os usuários podem acompanhar estatísticas de jogadores e equipes, resultados de partidas e interagir em chats em tempo real com outros usuários.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FoolishOrange/plataforma-de-estatistica-de-esportes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/FoolishOrange/plataforma-de-estatistica-de-esportes/issues"
+  },
+  "homepage": "https://github.com/FoolishOrange/plataforma-de-estatistica-de-esportes#readme"
+}

@@ -133,9 +133,9 @@ valorKDA: Indicador de desempenho (Kill/Death/Assist), geralmente calculado.
 
 ## 3. Tecnologias: 
 
-**Framework** - Bootstrao versão 5.3.8
-**Api** - HLTV.org Live and Upcoming Matches versão 1.0.12
-**Agentes de IA** - Mermaid.ia, Chatgpt e Stitch.IA
+- **Framework** - Bootstrao versão 5.3.8
+- **Api** - Liquipedia versão 1.0.12
+- **Agentes de IA** - Mermaid.ia, Chatgpt e Stitch.IA
 
 ## 4. Rotas da API (JSON Server)
 

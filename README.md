@@ -25,9 +25,9 @@ https://utfpr-gp.github.io/roubank-css/
 
 ## 💻 Tecnologias e Dependências
 
-- **Framework CSS:** Materializeweb
+- **Framework CSS:** Bootstrap
 - **APIs**
-- HLTV.org Live and Upcoming Matches - Para adiquirir as informações e estatisticas de uma partida
+- Liquipedia - A melhor e mais atualizada API para adiquirir informações sobre partidas profissionais de e-sports
 - **JavaScript:**
   - **JQuery** - Para realizar animações e manipulação do DOM.
   - **JSON Server** - Para simular uma API REST.

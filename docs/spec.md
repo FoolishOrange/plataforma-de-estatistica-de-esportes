@@ -133,7 +133,7 @@ valorKDA: Indicador de desempenho (Kill/Death/Assist), geralmente calculado.
 
 ## 3. Tecnologias: 
 
-- **Framework** - Bootstrao versão 5.3.8
+- **Framework** - Bootstrap versão 5.3.8
 - **Api** - Liquipedia versão 1.0.12
 - **Agentes de IA** - Mermaid.ia, Chatgpt e Stitch.IA
 

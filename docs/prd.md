@@ -2,7 +2,7 @@
 
 ## 1. Visão Geral e Objetivo
 
-O **PlaceHolder** é uma aplicação web que simula um site de estatísticas e banco de dados de partidas profissionais de jogos online.
+O **PlaceHolder** é uma aplicação web que simula um site de estatísticas e banco de dados de partidas profissionais de CS2.
 
 ## 2. Atores do Sistema
 
